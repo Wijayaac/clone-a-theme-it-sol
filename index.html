@@ -5,16 +5,91 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon">
     <title>IT Solutions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Livvic:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <!-- SAL css -->
+    <link rel="stylesheet" href="./assets/css/sal.css">
+
 </head>
 
-<body>
-    <div class="container">
-        <img src="./assets/images/bg-image-call-to-action.webp" class="img-fluid" alt="">
+<body data-bs-spy="scroll" data-bs-target="#navbar-top" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+    <!-- mobile menu -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+            <a class="navbar-brand" href="#">
+                <img src="./assets/images/logo-dark.webp" alt="logo_dark" class="header__logo-image">
+            </a>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body" data-sal="slide-up" data-sal-duration='600' data-sal-delay="400"
+            data-sal-easing="ease-out-back">
+            <ul class="nav d-flex header__navigation mb-0 ">
+                <li class="nav-item"><a class="nav-link header__menu-item" href="#hero-section">Home</a></li>
+                <li class="nav-item"><a class="nav-link header__menu-item" href="#">About</a></li>
+                <li class="nav-item"><a class="nav-link header__menu-item" href="#">Services</a></li>
+                <li class="nav-item"><a class="nav-link header__menu-item" href="#">Portfolios</a></li>
+                <li class="nav-item"><a class="nav-link header__menu-item" href="#">Team</a></li>
+                <li class="nav-item"><a class="nav-link header__menu-item" href="#">Blog</a></li>
+                <li class="nav-item"><a class="nav-link header__menu-item" href="#">Contact</a></li>
+            </ul>
+        </div>
     </div>
+    <!-- end of mobile menu -->
+    <header class="header">
+        <!-- desktop menu -->
+        <nav class="navbar bg-light" id="navbar-top">
+            <div class="container py-lg-3">
+                <a class="navbar-brand" href="#">
+                    <img src="./assets/images/logo-dark.webp" alt="logo_dark" class="header__logo-image">
+                </a>
+                <button class="btn btn-outline-secondary hide-for-desktop" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                    <img src="./assets/images/nav-icon.svg" alt="nav icon">
+                </button>
+
+                <div class=" hide-for-mobile px-lg-5">
+                    <ul class="nav d-flex header__navigation mb-0">
+                        <li class="nav-item"><a class="nav-link header__menu-item" href="#hero-section">Home</a></li>
+                        <li class="nav-item"><a class="nav-link header__menu-item" href="#">About</a></li>
+                        <li class="nav-item"><a class="nav-link header__menu-item" href="#">Services</a></li>
+                        <li class="nav-item"><a class="nav-link header__menu-item" href="#">Portfolios</a></li>
+                        <li class="nav-item"><a class="nav-link header__menu-item" href="#">Team</a></li>
+                        <li class="nav-item"><a class="nav-link header__menu-item" href="#">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link header__menu-item" href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- end of desktop menu -->
+    </header>
+    <main class="container-fluid px-0">
+        <section class="hero" id="hero-section">
+            <div class="container hero__wrapper">
+                <div class="hero__text">
+                    <p class="hero__subheading">TECHNOLOGY & IT SOLUTIONS</p>
+                    <h1 class="hero__heading">Digital <span class="font-highlight-blue">Technology, </span> <span
+                            class="font-highlight-orange">IT Solution</span> & Services Around the World</h1>
+                    <p class="hero__description">We are leading technology solutions providing company all over the
+                        world
+                        doing
+                        over 40 years.</p>
+                    <button class="hero__call-to-action">GET STARTED</button>
+                </div>
+                <div class="hero__image" style="background-image: url('./assets/images/hero.webp')">
+                </div>
+            </div>
+        </section>
+    </main>
+
     <script src="./assets/js/popper.min.js"></script>
     <script src="./assets/js/bootstrap.min.js"></script>
+    <!-- SAL js -->
+    <script src="./assets/js/sal.js"></script>
+    <script src="./assets/js/script.js"></script>
 </body>
 
 </html>
