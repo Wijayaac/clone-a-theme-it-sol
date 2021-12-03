@@ -5,24 +5,49 @@ body {
   font-family: $main-font;
 }
 
-.hide-for-mobile {
-  display: none;
-  @include media-breakpoint-up(md) {
-    display: block;
-  }
-}
-.hide-for-desktop {
-  display: block;
-  @include media-breakpoint-up(md) {
+.hide-for {
+  &-mobile {
     display: none;
+    @include media-breakpoint-up(md) {
+      display: block;
+    }
+  }
+  &-desktop {
+    display: block;
+    @include media-breakpoint-up(md) {
+      display: none;
+    }
   }
 }
+
 .font-highlight {
   &-blue {
     color: $blue-400;
   }
   &-orange {
     color: $orange-500;
+  }
+}
+.background {
+  &-orange {
+    background-image: linear-gradient(
+      290deg,
+      $orange-300,
+      darken($orange-500, 10)
+    );
+  }
+  &-blue {
+    background-image: linear-gradient(290deg, $blue-300, darken($blue-500, 10));
+  }
+  &-purple {
+    background-image: linear-gradient(
+      290deg,
+      $indigo-300,
+      darken($indigo-500, 10)
+    );
+  }
+  &-pink {
+    background-image: linear-gradient(290deg, $pink-300, darken($pink-500, 10));
   }
 }
 
@@ -108,5 +133,67 @@ body {
     background-size: cover;
     width: 51%;
     height: 600px;
+  }
+}
+
+.specialty {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  padding-top: 50px;
+  margin-top: 50px;
+  &__highlight {
+    display: flex;
+    flex-direction: row;
+    width: 40%;
+    &-bottom {
+      margin-top: 10px;
+      margin-right: 10px;
+    }
+  }
+  &__item {
+    background-color: $blue-200;
+    padding: 50px 60px 50px 30px;
+    margin: 10px 0;
+    border-radius: 10px;
+    color: $white;
+    font-weight: 500;
+  }
+  &__text {
+    width: 40%;
+  }
+  &__subheading {
+    color: $orange-500;
+    font-weight: 500;
+    margin-top: 20px;
+  }
+  &__heading {
+    font-weight: 700;
+    font-size: calc($font-size-lg + 1.25rem);
+  }
+  &__progress {
+    font-weight: 500;
+
+    &--analytics,
+    &--development,
+    &--solutions {
+      margin: 0.875rem 0;
+      padding: 2px;
+      height: 14px;
+      border-radius: 6px;
+    }
+    &--analytics {
+      border: 1px solid $orange-500;
+    }
+    &--development {
+      border: 1px solid $indigo-500;
+    }
+    &--solutions {
+      border: 1px solid $blue-500;
+    }
+    &-bar {
+      border-radius: 4px;
+      height: 0.5rem;
+    }
   }
 }
